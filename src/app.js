@@ -11,6 +11,7 @@ app.use(compression()) // Reduce size of input and output data
 
 
 // init db
+require('./dbs/init.mongodb')
 
 // init routes
 app.get('/', (req, res, next) => {
