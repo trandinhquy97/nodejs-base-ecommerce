@@ -1,9 +1,8 @@
-const app = require("./src/app");
+const app = require('./src/app');
+const { app: { port } } = require('./src/configs/config.mongodb')
 
-const PORT = 3055;
-
-const server = app.listen(PORT, () => {
-    console.log(`MSW eCommerce start with port ${PORT}`);
+const server = app.listen(port, () => {
+    console.log(`MSW eCommerce start with port ${port}`);
 })
 
 process.on('SIGINT', () => {

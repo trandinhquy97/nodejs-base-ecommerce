@@ -1,9 +1,11 @@
 'use strict'
 
-const { default: mongoose } = require("mongoose")
-const { countConnect } = require("../helpers/check.connect")
 
-const connectionString = 'mongodb://127.0.0.1:27017/shopDev'
+const { default: mongoose } = require('mongoose')
+const { db: { host, name, port } } = require('../configs/config.mongodb')
+const { countConnect } = require('../helpers/check.connect')
+
+const connectionString = `mongodb://${host}:${port}/${name}`
 
 class Database {
 
